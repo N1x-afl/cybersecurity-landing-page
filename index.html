@@ -279,6 +279,66 @@
             color: #a0aec0;
         }
 
+        /* Resources Section */
+        .resources {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .resources-category {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-size: 28px;
+            color: #00d4ff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .resource-link {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 212, 255, 0.05));
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            display: block;
+            text-align: center;
+        }
+
+        .resource-link:hover {
+            transform: translateY(-5px);
+            border-color: #00ff88;
+            box-shadow: 0 15px 30px rgba(0, 255, 136, 0.2);
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 212, 255, 0.1));
+        }
+
+        .resource-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .resource-link h4 {
+            font-size: 20px;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .resource-link p {
+            color: #a0aec0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -320,11 +380,11 @@
         <div class="container">
             <h1>Proyecto Ciberseguridad</h1>
             <p>Exploración de conceptos y mejores prácticas en seguridad informática. Una demostración técnica sobre protección digital moderna.</p>
-            <a href="#conceptos" class="cta-button">Ver Proyecto</a>
+            <a href="#conceptos" class="cta-button">Explorar Conceptos</a>
         </div>
     </section>
 
-    <section class="features">
+    <section class="features" id="conceptos">
         <div class="container">
             <h2>Conceptos Clave</h2>
             <div class="features-grid">
@@ -381,6 +441,116 @@
                 <div class="stat-item">
                     <div class="stat-number">277 días</div>
                     <div class="stat-label">Tiempo Promedio Detección</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources" id="recursos">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 42px; margin-bottom: 60px; color: #00ff88;">Recursos y Herramientas</h2>
+            
+            <div class="resources-category">
+                <h3 class="category-title">📚 Frameworks y Estándares</h3>
+                <div class="resources-grid">
+                    <a href="https://owasp.org/" target="_blank" class="resource-link">
+                        <div class="resource-icon">🔒</div>
+                        <h4>OWASP</h4>
+                        <p>Open Web Application Security Project</p>
+                    </a>
+                    <a href="https://www.nist.gov/cyberframework" target="_blank" class="resource-link">
+                        <div class="resource-icon">📋</div>
+                        <h4>NIST Framework</h4>
+                        <p>Cybersecurity Framework</p>
+                    </a>
+                    <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" class="resource-link">
+                        <div class="resource-icon">🏆</div>
+                        <h4>ISO 27001</h4>
+                        <p>Gestión de Seguridad de la Información</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="resources-category">
+                <h3 class="category-title">🛠️ Herramientas Populares</h3>
+                <div class="resources-grid">
+                    <a href="https://www.wireshark.org/" target="_blank" class="resource-link">
+                        <div class="resource-icon">📡</div>
+                        <h4>Wireshark</h4>
+                        <p>Analizador de protocolos de red</p>
+                    </a>
+                    <a href="https://nmap.org/" target="_blank" class="resource-link">
+                        <div class="resource-icon">🔍</div>
+                        <h4>Nmap</h4>
+                        <p>Escáner de seguridad y redes</p>
+                    </a>
+                    <a href="https://portswigger.net/burp" target="_blank" class="resource-link">
+                        <div class="resource-icon">🕷️</div>
+                        <h4>Burp Suite</h4>
+                        <p>Plataforma de pruebas de seguridad web</p>
+                    </a>
+                    <a href="https://www.metasploit.com/" target="_blank" class="resource-link">
+                        <div class="resource-icon">💣</div>
+                        <h4>Metasploit</h4>
+                        <p>Framework de penetration testing</p>
+                    </a>
+                    <a href="https://www.kali.org/" target="_blank" class="resource-link">
+                        <div class="resource-icon">🐉</div>
+                        <h4>Kali Linux</h4>
+                        <p>Distribución para pentesting</p>
+                    </a>
+                    <a href="https://github.com/sqlmapproject/sqlmap" target="_blank" class="resource-link">
+                        <div class="resource-icon">💉</div>
+                        <h4>SQLmap</h4>
+                        <p>Herramienta de inyección SQL</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="resources-category">
+                <h3 class="category-title">🎓 Certificaciones</h3>
+                <div class="resources-grid">
+                    <a href="https://www.comptia.org/certifications/security" target="_blank" class="resource-link">
+                        <div class="resource-icon">🎖️</div>
+                        <h4>CompTIA Security+</h4>
+                        <p>Certificación fundamental</p>
+                    </a>
+                    <a href="https://www.isc2.org/Certifications/CISSP" target="_blank" class="resource-link">
+                        <div class="resource-icon">👔</div>
+                        <h4>CISSP</h4>
+                        <p>Profesional de seguridad certificado</p>
+                    </a>
+                    <a href="https://www.offensive-security.com/pwk-oscp/" target="_blank" class="resource-link">
+                        <div class="resource-icon">⚔️</div>
+                        <h4>OSCP</h4>
+                        <p>Offensive Security Certified Professional</p>
+                    </a>
+                    <a href="https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/" target="_blank" class="resource-link">
+                        <div class="resource-icon">🎩</div>
+                        <h4>CEH</h4>
+                        <p>Certified Ethical Hacker</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="resources-category">
+                <h3 class="category-title">📖 Recursos de Aprendizaje</h3>
+                <div class="resources-grid">
+                    <a href="https://tryhackme.com/" target="_blank" class="resource-link">
+                        <div class="resource-icon">🎮</div>
+                        <h4>TryHackMe</h4>
+                        <p>Plataforma de aprendizaje interactivo</p>
+                    </a>
+                    <a href="https://www.hackthebox.com/" target="_blank" class="resource-link">
+                        <div class="resource-icon">📦</div>
+                        <h4>Hack The Box</h4>
+                        <p>Laboratorios de pentesting</p>
+                    </a>
+                    <a href="https://www.cybrary.it/" target="_blank" class="resource-link">
+                        <div class="resource-icon">🎬</div>
+                        <h4>Cybrary</h4>
+                        <p>Cursos gratuitos de ciberseguridad</p>
+                    </a>
                 </div>
             </div>
         </div>
